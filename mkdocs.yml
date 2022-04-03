@@ -1,4 +1,6 @@
 site_name: Essentials BES docs
+plugins:
+  - autolinks
 theme:
   name: material
   language: es
