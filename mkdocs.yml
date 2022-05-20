@@ -32,3 +32,36 @@ markdown_extensions:
   - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
+
+nav:
+  - Introducción: "index.md"
+  - Conceptos básicos:
+    - Archivos de la carpeta raíz: ""
+    - PBS: ""
+    - Creación de tilesets: ""
+  - Pokémon:
+    - Definir Pokémon: ""
+  - Batallas:
+    - Movimientos: ""
+    - Habilidades: ""
+    - Tipos de batallas: ""
+  - Objetos: ""
+  - Mapas:
+    - Definir un mapa: ""
+    - Terrain tags: ""
+    - Estructuras: ""
+  - Eventos:
+    - Introducción a los eventos: ""
+    - Eventos especiales: ""
+  - Interfaces:
+    - Interfaces Pokémon: ""
+    - Interfaces del sistema: ""
+  - Jugador:
+    - Ajustes (Switches): ""
+    - Cambiar aspecto: ""
+    - Definir protagonistas: ""
+  - Otros:
+    - Settings (Ajustes): ""
+    - Debug: ""
+  - Tutoriales: ""
+  - Discord: "https://discord.com/invite/9XynJCM"
