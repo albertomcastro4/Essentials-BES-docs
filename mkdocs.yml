@@ -1,6 +1,9 @@
 site_name: Essentials BES docs
 plugins:
   - autolinks
+  - search:
+      lang: 
+        - es
 theme:
   name: material
   language: es
@@ -9,6 +12,8 @@ theme:
     accent: amber
   features:
     - content.code.annotate
+    - search.suggest
+    - search.highlight
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
