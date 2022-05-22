@@ -49,7 +49,9 @@ nav:
   - Batallas:
     - Movimientos: ""
     - Habilidades: ""
-    - Tipos de batallas: ""
+    - Tipos de batallas:
+      - Entrenadores : "battles/Trainers"
+      - Salvajes : ""
   - Objetos: ""
   - Mapas:
     - Definir un mapa: ""
