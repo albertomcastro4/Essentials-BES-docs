@@ -56,7 +56,8 @@ nav:
     - Terrain tags: ""
     - Estructuras: ""
   - Eventos:
-    - Introducción a los eventos: ""
+    - Introducción a los eventos: "events/Introduction"
+    - Interruptores y variables: "events/SwitchesAndVariables"
     - Eventos especiales: ""
   - Interfaces:
     - Interfaces Pokémon: ""
