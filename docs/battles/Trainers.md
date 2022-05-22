@@ -19,6 +19,7 @@ BONSLY,11           <-- Segundo Pokémon y su nivel.
 ~~~
 Donde entrenador nuevo se separa por `#-------------------` de los demás. 
 Estos son los campos obligatorios que todo entrenador debe tener; además de estas se pueden añadir otras opciones:
+
 | Líneas  | Descripción  | Ejemplo |
 | ------------ | ------------ | ------------ |
 | 1 | Tipo de entrenador | YOUNGSTER |
@@ -55,6 +56,7 @@ ONIX,14,SITRUSBERRY,HEADSMASH,ROCKTHROW,RAGE,ROCKTOMB,0,M,,shiny,,20,,Rocky,,19
 ~~~
 
 Cada posición representa un parámetro distinto:
+
 | Posición  | Descripción  | Valores válidos | Valor por defecto
 | ------------ | ------------ | ------------ | ------------ 
 |1| Especie del Pokémon | Nombres internos de Pokémon | Campo obligatorio
@@ -87,6 +89,7 @@ Para comenzar un combate desde un evento, se crea un condicional con la siguient
 ```
 pbTrainerBattle(:TIPO, "Nombre", _I("Diálogo final"), false, 0, false, 0)
 ```
+
 | Parámetro  | Descripción  | Valor por defecto | Ejemplo
 | ------------ | ---- | ------------ | -
 |1 | Nombre interno del tipo de entrenador | Obligatorio |:CAMPER
@@ -104,6 +107,7 @@ En caso de que el combate se pueda perder (y se pierda), el evento continuará s
 <font size="2">Ejemplo de un combate que se puede perder.</font>
 
 El resultado del combate aparecerá en la variable especificada, tomando los siguientes valores: 
+
 |Valor| Singificado
 |-|-
 1| Victoria
@@ -139,6 +143,7 @@ A partir de aquí hay dos opciones:
     <font size="2">Ejemplo de un entrenador creado por comentarios</font>
 
     Hay varios comentarios distintos que se pueden utilizar para configurar nuestro entrenador
+    
     |Anotación | Descripción | Valores válidos | Obligatoria
     |-|-|-|-
     |Battle:| Texto que dice el entrenador al verte | Texto|Sí
@@ -212,10 +217,12 @@ Los dos primeros casos son intencionados, mientras que el último se da cuando d
 
 ## **Animaciones de inicio** <a name="animations"></a>
 La base incluye una forma fácil de hacer animaciones de inicio similares a las que aparecen en HGSS.
+
 ![Ejemplo](vsbar_example.png)
 
 Para que aparezcan al principio de un combate, simplemente hace falta crear los gráficos
-- Graphics/Transitions/vsBarXXX.png
-- Graphics/Transitions/vsTrainerXXX.png
+
+- `Graphics/Transitions/vsBarXXX.png`
+- `Graphics/Transitions/vsTrainerXXX.png`
 
 donde XXX es el número del tipo de entrenador. Esto quiere decir que las animaciones de entrada van ligadas a un tipo de entrenador, no a uno en concreto.
