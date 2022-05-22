@@ -2,6 +2,8 @@
 ## Tabla de contenidos
 1. [Encuentros salvajes](#wild)
 2. [Encuentros de evento](#event)
+   1. [Crear un salvaje](#create)
+   2. [Modificar un salvaje](#modify)
 3. [Pokémon errantes](#roaming)
 
 ## **Encuentros salvajes** <a name="wild"></a>
@@ -91,3 +93,74 @@ MAGIKARP,10,17
 <text font="2">Ejemplo con varios encuentros definidos</text>
 
 ## **Encuentros de evento** <a name="event"></a>
+
+### **Crear un salvaje** <a name ="create"></a>
+
+No solo es posible crear batallas salvajes mediante encuentros aleatorios. También es posible crear una batalla desde un evento cuando se quiera, usando la siguiente llamada a script:
+```ruby
+pbWildBattle(species,level,result,escape,canlose)
+pbDoubleWildBattle(species1,level1,species2,level2,result,escape,canlose)
+```
+
+|Parámetro|Descripción|Ejemplo|
+|-|-|-
+|Species|Especie del Pokémon salvaje|:PIKACHU
+|Level|Nivel del Pokémon salvaje|10
+|Result|Número de la variable donde se almacena<br> el resultado del combate: <ul><li>1 - Victoria</li><li>2 - Derrota</li><li>3 - Huída</li><li>4 - Capturado</li><li>5 - Empate</li></ul>| 50
+|escape|Determina si se podrá huir o no de la batalla| true / false
+|canlose|Determina si el evento continuará después <br>de perder en vez de enviar al jugador al Centro Pokémon|true / false
+
+Así, si llamamos a 
+```ruby
+pbWildBattle(:PIKACHU,10,50,false,true)
+```
+habrá un combate contra un Pikachu a nivel 10, del cual no se puede escapar. Si perdemos el combate el evento continuará.<br> El resultado queda grabado en la variable 50 (por ejemplo, podemos comprobar si el jugador ha capturado al Pikachu o lo ha derrotado).
+
+Similarmente, se puede hacer un combate doble contra un salvaje, usando el script:
+```ruby
+pbDoubleWildBattle(species1,level1,species2,level2,result,escape,canlose)
+```
+
+### **Modificar un salvaje** <a name="modify"></a>
+
+Si queremos modificar algún atributo de estos encuentros, debemos hacerlo por script. Debemos añadir el siguiente código:
+```ruby
+Events.onWildPokemonCreate += proc{|sender,e|
+  pokemon = e[0]
+  if $game_switches[X]
+    
+  end
+}
+``` 
+en la sección del editor de scripts `PField_EncounterModifiers` (o en una sección nueva, siempre por encima de `Main`). Aquí, X representa el número de un interruptor que deberá encenderse ANTES de llamar al script `pbWildBattle()` y deberá apagarse justo después de este.
+
+Dentro del 
+```ruby
+if $game_switches[X]
+    
+end
+```
+debemos editar nuestro Pokémon, esto se hace usando los diversos [atributos]() de la clase `PokeBattle_Pokemon`.
+
+```ruby
+Events.onWildPokemonCreate += proc{|sender,e|
+  pokemon = e[0]
+  if $game_switches[X]
+    #252 EVs en HP
+    pokemon.evs[0] = 252
+    #31 IVs en HP 
+    pokemon.ivs[0] = 31  
+    #Fuerza que su primer movimiento sea Salpicadura
+    pokemon.moves[0] = PBMove.new(PBMoves::SPLASH) 
+    #Cambia el mote del Pokémon
+    pokemon.name = "Kitt"
+  end
+}
+```
+<text font="2">Ejemplo de modificación de encuentro.</text>
+
+![Ejemplo](modifier_example.png)
+<text font="2">Ejemplo usando el interruptor 60.</text>
+
+## **Pokémon errantes** <a name="roaming"></a>
+Nadie usa esto algún día lo haré
