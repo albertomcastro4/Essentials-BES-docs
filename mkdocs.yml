@@ -1,6 +1,9 @@
 site_name: Essentials BES docs
 plugins:
   - autolinks
+  - search:
+      lang: 
+        - es
 theme:
   name: material
   language: es
@@ -9,6 +12,8 @@ theme:
     accent: amber
   features:
     - content.code.annotate
+    - search.suggest
+    - search.highlight
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -42,16 +47,20 @@ nav:
   - Pokémon:
     - Definir Pokémon: "pokemon/DefPoke"
   - Batallas:
-    - Movimientos: ""
+    - Movimientos:
+      - Definir movimientos: "battles/DefineMovements"
     - Habilidades: ""
-    - Tipos de batallas: ""
+    - Tipos de batallas:
+      - Entrenadores : "battles/Trainers"
+      - Salvajes : ""
   - Objetos: ""
   - Mapas:
     - Definir un mapa: ""
-    - Terrain tags: ""
+    - Terrain tags: "maps/TerrainTags"
     - Estructuras: ""
   - Eventos:
-    - Introducción a los eventos: ""
+    - Introducción a los eventos: "events/Introduction"
+    - Interruptores y variables: "events/SwitchesAndVariables"
     - Eventos especiales: ""
   - Interfaces:
     - Interfaces Pokémon: ""
@@ -63,5 +72,6 @@ nav:
   - Otros:
     - Settings (Ajustes): ""
     - Debug: ""
-  - Tutoriales: ""
+  - Tutoriales:
+    - Crear nuevas etiquetas de terreno: "tutorials/CreatingTerrainTags"
   - Discord: "https://discord.com/invite/9XynJCM"
