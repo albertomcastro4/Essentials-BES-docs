@@ -52,7 +52,7 @@ nav:
     - Habilidades: ""
     - Tipos de batallas:
       - Entrenadores : "battles/Trainers"
-      - Salvajes : ""
+      - Salvajes : "battles/Wild"
   - Objetos: ""
   - Mapas:
     - Definir un mapa: ""
