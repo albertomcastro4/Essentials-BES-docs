@@ -187,6 +187,7 @@ Con esto, ya podemos crear entrenadores de ruta de forma fácil.
 ## **Combates dobles** <a name="doubles"></a>
 
 Hay 3 formas de comenzar un combate doble:
+
 - Un solo entrenador 
 - Dos entrenadores en pareja
 - Dos entrenadores no relacionados
