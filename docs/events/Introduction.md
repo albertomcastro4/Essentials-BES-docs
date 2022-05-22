@@ -8,6 +8,8 @@ Y el punto más importante son los eventos, los cuáles se detallan en esta pág
 
 ## Interfaz principal
 
+![Interfaz de evento](example_event.png){ width="550" }
+
 Al crear un evento en una casilla del mapa (sólo puede haber uno por casilla), en su correspondiente capa, lo primero que aparecerá será esta interfaz. Dependiendo de la versión de RPG Maker XP que se utilice, sea en español o inglés, variarán los nombres y en algunos casos, la posición de los elementos dentro de la misma.
 
   - **ID y nombre del evento**: a todos los eventos se les asocia un ID al momento de crearlo, lo que permite identificarlos incluso tras cambiarles los nombres, que son recomendables de utilizar pues agiliza encontrarlos y saber qué evento es.
