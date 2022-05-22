@@ -99,7 +99,7 @@ pbTrainerBattle(:TIPO, "Nombre", _I("Diálogo final"), false, 0, false, 0)
 
 En caso de que el combate se pueda perder (y se pierda), el evento continuará su proceso, ejecutando la excepción del condicional en caso de haberla, sin ejecutar el cuerpo del condicional.
 
-![Ejemplo](/img/battles/trainers/script_example.png)
+![Ejemplo](script_example.png)
 
 <font size="2">Ejemplo de un combate que se puede perder.</font>
 
@@ -119,13 +119,13 @@ A la hora de crear un entrenador de ruta, hay dos formas de hacerlo: usar el scr
 
 El primer paso para crear un entrenador de ruta es cambiar el nombre del evento a Trainer(X), donde X es la distancia máxima en casillas a la que te podrá detectar el entrenador.
 
-![Ejemplo](/img/battles/trainers/trainername_example.png)
+![Ejemplo](trainername_example.png)
 
 <font size="2">Ejemplo de nombre de un entrenador</font>
 
 Además, se debe poner su método de activación en "Colisionar" o "Event Touch".
 
-![Ejemplo](/img/battles/trainers/eventouch_example.png)
+![Ejemplo](eventouch_example.png)
 
 
 A partir de aquí hay dos opciones:
@@ -134,7 +134,7 @@ A partir de aquí hay dos opciones:
 
     Para usar anotaciones, se añaden comentarios desde RPG Maker al comienzo del evento. Al compilar el juego, estos entrenadores se crearan de forma automática. 
 
-    ![Ejemplo](/img/battles/trainers/comment_example.png)
+    ![Ejemplo](comment_example.png)
 
     <font size="2">Ejemplo de un entrenador creado por comentarios</font>
 
@@ -169,11 +169,11 @@ A partir de aquí hay dos opciones:
     ```
     quedando tal que así:
 
-    ![Ejemplo](/img/battles/trainers/trainer_example.png)
+    ![Ejemplo](trainer_example.png)
 
     <font size="2">Primera página de un entrenador</font>
 
-    ![Ejemplo](/img/battles/trainers/trainer2_example.png)
+    ![Ejemplo](trainer2_example.png)
 
     <font size="2">Segunda página de un entrenador</font>
 
@@ -194,7 +194,7 @@ Los dos primeros casos son intencionados, mientras que el último se da cuando d
     ```
     $Trainer.ablePokemonCount<=1
     ```
-    ![Ejemplo](../img/battles/trainers/doublechek_example.png)
+    ![Ejemplo](doublechek_example.png)
 
     Nótese la importancia del comando "Exit Event Processing" dentro del cuerpo del condicional para evitar problemas.
 
@@ -212,7 +212,7 @@ Los dos primeros casos son intencionados, mientras que el último se da cuando d
 
 ## **Animaciones de inicio** <a name="animations"></a>
 La base incluye una forma fácil de hacer animaciones de inicio similares a las que aparecen en HGSS.
-![Ejemplo](/img/battles/trainers/vsbar_example.png)
+![Ejemplo](vsbar_example.png)
 
 Para que aparezcan al principio de un combate, simplemente hace falta crear los gráficos
 - Graphics/Transitions/vsBarXXX.png
