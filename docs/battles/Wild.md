@@ -1,10 +1,4 @@
 # Combates contra salvajes
-## Tabla de contenidos
-1. [Encuentros salvajes](#wild)
-2. [Encuentros de evento](#event)
-   1. [Crear un salvaje](#create)
-   2. [Modificar un salvaje](#modify)
-3. [Pokémon errantes](#roaming)
 
 ## **Encuentros salvajes** <a name="wild"></a>
 

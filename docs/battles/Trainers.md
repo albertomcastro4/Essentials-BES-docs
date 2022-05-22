@@ -1,10 +1,4 @@
 # Combates contra entrenadores
-## Tabla de contenidos
-1. [Definir un combate](#definition)
-2. [Crear un combate en un evento](#setup)
-3. [Crear un entrenador de ruta](#rute)
-4. [Combates dobles](#doubles)
-5. [Animaciones de inicio](#animations)
 
 ## **Definir un combate** <a name="definition"></a>
 Para crear un combate contra un entrenador, previamente es necesario definirlo en el PBS "trainers.txt". Para ello se sigue la siguiente estructura:
