@@ -47,7 +47,8 @@ nav:
   - Pokémon:
     - Definir Pokémon: "pokemon/DefPoke"
   - Batallas:
-    - Movimientos: ""
+    - Movimientos:
+      - Definir movimientos: "battles/DefineMovements"
     - Habilidades: ""
     - Tipos de batallas:
       - Entrenadores : "battles/Trainers"
