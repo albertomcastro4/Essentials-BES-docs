@@ -1,0 +1,1291 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
+    
+    
+      
+        <title>Interruptores y variables - Essentials BES docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c382b1dc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ff6e42">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-orange" data-md-color-accent="amber">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#interruptores-y-variables" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Essentials BES docs" class="md-header__button md-logo" aria-label="Essentials BES docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Essentials BES docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Interruptores y variables
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Essentials BES docs" class="md-nav__button md-logo" aria-label="Essentials BES docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Essentials BES docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Introducción
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Conceptos básicos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Conceptos básicos" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Conceptos básicos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Archivos de la carpeta raíz
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        PBS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Creación de tilesets
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Pokémon
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pokémon" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Pokémon
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pokemon/DefPoke" class="md-nav__link">
+        Definir Pokémon
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Batallas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Batallas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Batallas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Movimientos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Habilidades
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Tipos de batallas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Objetos
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Mapas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mapas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Mapas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Definir un mapa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../maps/TerrainTags" class="md-nav__link">
+        Terrain tags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Estructuras
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Eventos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Eventos" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Eventos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Introduction" class="md-nav__link">
+        Introducción a los eventos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="." class="md-nav__link">
+        Interruptores y variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Eventos especiales
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Interfaces
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Interfaces" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Interfaces
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Interfaces Pokémon
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Interfaces del sistema
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Jugador
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Jugador" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Jugador
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Ajustes (Switches)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Cambiar aspecto
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Definir protagonistas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Otros
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Otros" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Otros
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Settings (Ajustes)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Debug
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Tutoriales
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tutoriales" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Tutoriales
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/CreatingTerrainTags" class="md-nav__link">
+        Crear nuevas etiquetas de terreno
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://discord.com/invite/9XynJCM" class="md-nav__link">
+        Discord
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#interruptores" class="md-nav__link">
+    Interruptores
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interruptores-locales" class="md-nav__link">
+    Interruptores locales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="interruptores-y-variables">Interruptores y variables</h1>
+<p>Existen tres elementos determinantes para comprender el funcionamiento de RPG Maker XP y Pokémon Essentials BES, para
+así sacar su máximo potencial e influyen en los eventos que ocurren dentro del juego: los interruptores, los
+interruptores locales y las variables.</p>
+<h2 id="interruptores">Interruptores</h2>
+<p>Los interruptores son un elemento variable que tiene dos estados: encendido (ON) o apagado (OFF). Sirven para activar o
+desactivar eventos o condiciones dentro de éstos, controlándolos desde secciones concretas.</p>
+<ul>
+<li><strong>Condiciones de aparición</strong>: por cada página que componga a un evento, se pueden usar hasta un máximo de dos
+  interruptores para activarlo. Un ejemplo: en un mapa hay un evento de dos páginas que tiene la primera en blanco y en
+  la segunda, un personaje que inicia un combate. Para que ese personaje aparezca, debe cumplirse su condición de
+  aparición, que en este caso será un interruptor. ¿Qué hará que el interruptor se encienda? Otro evento que active ese
+  interruptor, como, por ejemplo, uno que haga avanzar la trama. Si se ha llegado a ese punto, el entrenador aparecerá;
+  si aún es pronto, no lo hará.</li>
+<li><strong>Condiciones y efectos (Conditional Branch)</strong>: este es un comando de evento que permite crear condiciones dentro de
+  los eventos, para que si se cumplen (o no), ocurra lo que esté programado. Por ejemplo, que un personaje diga cosas
+  distintas en función a si se ha obtenido una medalla o no.</li>
+<li><strong>Mover evento (Set Move Route)</strong>: una de las posibles acciones dentro de este comando de evento es encender o apagar
+  un interruptor.</li>
+</ul>
+<p>Los interruptores se guardan en una lista, accesible sólo cuando va a elegirse qué interruptor afectará a un evento
+concreto en los casos mencionados antes. Cada posición en la lista tiene asignado un número y puede cambiarse su nombre
+para localizarlos con facilidad.</p>
+<p>Hay algunos interruptores prestablecidos en Pokémon Essentials BES y no deben sobrescribirse (excepto los que van del 51
+en adelante, pues son parte del proyecto de prueba, no de la base en sí.)</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Nombre</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Starting over</td>
+<td>En ON cuando el jugador se desmaye y permitir que cosas especiales ocurran. Debe volver a colocarse en OFF una vez acaben.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Seen Pokérus in Poké Center</td>
+<td>En ON una vez que se haya identificado al Pokérus por primera vez y así evitar la explicación del mismo vuelva a mostrar.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Choosing starter</td>
+<td>Usado para determinar si el jugador está en la escena de la elección del inicial.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Defeated Gym 1</td>
+<td>Usado para determinar si el jugador ha derrotado al primer Líder de Gimnasio.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Defeated Gym 2</td>
+<td>Usado para determinar si el jugador ha derrotado al segundo Líder de Gimnasio.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Defeated Gym 3</td>
+<td>Usado para determinar si el jugador ha derrotado al tercer Líder de Gimnasio.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Defeated Gym 4</td>
+<td>Usado para determinar si el jugador ha derrotado al cuarto Líder de Gimnasio.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Defeated Gym 5</td>
+<td>Usado para determinar si el jugador ha derrotado al quinto Líder de Gimnasio.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Defeated Gym 6</td>
+<td>Usado para determinar si el jugador ha derrotado al sexto Líder de Gimnasio.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Defeated Gym 7</td>
+<td>Usado para determinar si el jugador ha derrotado al séptimo Líder de Gimnasio.</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Defeated Gym 8</td>
+<td>Usado para determinar si el jugador ha derrotado al octavo Líder de Gimnasio.</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Defeated Elite Four</td>
+<td>Usado para determinar si el jugador ha derrotado al Alto Mando.</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Fossil revival in progress</td>
+<td>En ON si el restaurador de fósiles está actualmente ocupado reviviendo uno que el jugador le ha dado. Se vuelve a dejar en OFF cuando ha acabado, en función la condición que se prefiera (por ejemplo, salir por la puerta del laboratorio donde reviven a los fósiles).</td>
+</tr>
+<tr>
+<td>14</td>
+<td>s:PBDayNight.isDay?</td>
+<td>En ON durante el día (entre las 6 AM y las 8 PM) y en OFF durante la noche.</td>
+</tr>
+<tr>
+<td>15</td>
+<td>s:PBDayNight.isNight?</td>
+<td>En ON durante la noche (entre las 8 PM y las 6 AM) y en OFF durante el día.</td>
+</tr>
+<tr>
+<td>16</td>
+<td>s:PBDayNight.isMorning?</td>
+<td>En ON durante la mañana (entre las 6 AM y el mediodía) y en OFF durante el resto del tiempo.</td>
+</tr>
+<tr>
+<td>17</td>
+<td>s:PBDayNight.isAfternoon?</td>
+<td>En ON durante la tarde (entre el mediodía y las 8 PM) y en OFF durante el resto del tiempo.</td>
+</tr>
+<tr>
+<td>18</td>
+<td>s:PBDayNight.isEvening?</td>
+<td>En ON durante el atardecer (entre las 5 PM y las 8 PM) y en OFF durante el resto del tiempo.</td>
+</tr>
+<tr>
+<td>19</td>
+<td>s:pbIsWeekday(-1,2,4,6)</td>
+<td>En ON el martes, jueves y sábado; en OFF, el resto de días.</td>
+</tr>
+<tr>
+<td>20</td>
+<td>s:!pbIsWeekday(-1,2,4,6)</td>
+<td>En ON el lunes, miércoles, viernes y domingo; en OFF, el resto de días.</td>
+</tr>
+<tr>
+<td>21</td>
+<td>s:tsOn?("A")</td>
+<td>En ON si el interruptor temporal (A) está activo y en OFF si no lo está.</td>
+</tr>
+<tr>
+<td>22</td>
+<td>s:tsOff?("A")</td>
+<td>En ON si el interruptor temporal (“A”) está desactivado y en OFF si sí lo está.</td>
+</tr>
+<tr>
+<td>23</td>
+<td>s:cooledDown?(86400)</td>
+<td>En ON si han pasado 24 horas (86400 segundos) desde que se configuró la variable del evento (con respecto al momento de entonces) y si el interruptor local A está encendido.</td>
+</tr>
+<tr>
+<td>24</td>
+<td>s:cooledDownDays?(1)</td>
+<td>En ON si el día actual es diferente al día en el que se configuró la variable del evento (con respecto al momento de entonces) y si el interruptor local A está encendido.</td>
+</tr>
+<tr>
+<td>25</td>
+<td>s:pbInSafari?</td>
+<td>En On si el jugador actualmente se encuentra dentro de la Zona Safari; en OFF, si no lo está.</td>
+</tr>
+<tr>
+<td>26</td>
+<td>s:pbBugContestUndecided?</td>
+<td>En ON durante el Concurso de captura de bichos.</td>
+</tr>
+<tr>
+<td>27</td>
+<td>s:pbBugContestDecided?</td>
+<td>En ON cuando el “Concurso de captura de bichos” ha terminado. Se usa para comenzar a juzgar y mostrar las capturas del resto de participantes.</td>
+</tr>
+<tr>
+<td>28</td>
+<td>s:pbInChallenge?</td>
+<td>En ON si el jugador actualmente está enfrentando uno de los retos del Frente Batalla.</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Has National Dex</td>
+<td>Se utiliza para determinar si el jugador tiene la Pokédex Nacional. Sin embargo, no hace que el jugador tenga obtenga dicho objeto.</td>
+</tr>
+<tr>
+<td>30</td>
+<td>s:pbNextMysteryGiftID&gt;0</td>
+<td>En ON si hay un Regalo Misterioso descargado que aún no ha sido recogido; en OFF si no hay ninguno.</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Shiny wild Pokémon</td>
+<td>Mientras está encendido, todos los encuentros con Pokémon salvajes serán variocolor (shiny).</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Fateful encounters</td>
+<td>Mientras esté encendido, todos los Pokémon creados serán “encuentros fatídicos”. No tiene uso más allá de emular los Pokémon que regalan los eventos oficiales.</td>
+</tr>
+<tr>
+<td>33</td>
+<td>No money lost in battle</td>
+<td>Mientras esté encendido, el jugador no perderá dinero tras perder un combate, pero sí podrá seguir obteniendo dinero si gana.</td>
+</tr>
+<tr>
+<td>34</td>
+<td>No Mega Evolution</td>
+<td>Mientras esté encendido, ningún Pokémon podrá megaevolucionar durante el combate, incluso si normalmente podía hacerlo.</td>
+</tr>
+<tr>
+<td>35</td>
+<td>No Ultra Burst</td>
+<td>Mientras esté encendido, impide a Nezcrozma (en concreto, a sus formas fusionadas con Solagaleo o Lunala) transformarse en Ultra-Necrozma.</td>
+</tr>
+<tr>
+<td>36</td>
+<td>No capturar</td>
+<td>Mientras esté encendido, impide la captura de Pokémon salvajes.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="interruptores-locales">Interruptores locales</h2>
+<p>Lo interruptores locales (Self Switch) son, en esencia, lo mismo que los interruptores y su funcionamiento es el mismo.
+Pero tienen varias diferencias y limitaciones.</p>
+<ul>
+<li>Sólo pueden usarse dentro de un mismo evento y están limitados a un máximo de 4: A, B, C y D. Eso quiere decir que el
+  evento, sólo usando interruptores locales, podría tener un máximo de 5 páginas (una de ellas, sin interruptor).
+  Además, sólo puede usarse un interruptor local por página, a diferencia de los interruptores, que pueden ser dos.</li>
+<li>Además de cómo condición de aparición, un interruptor local también puede ser una condición dentro del comando de
+  evento Condiciones y efectos (Conditional Branch), pero no del comando Mover evento (Set Move Route) como sí pasa con
+  los interruptores.</li>
+</ul>
+<p>¿Para qué se utilizan los interruptores locales, entonces? Para eventos sencillos y que no dependan de otros para su
+activación, siendo más sencillo utilizar en estos casos los interruptores locales. Un ejemplo: que un personaje entregue
+un objeto la primera vez que se hable con él, pero en las siguientes, cambie el diálogo y ya no lo haga.</p>
+<h2 id="variables">Variables</h2>
+<p>Una variable almacena un valor numérico, siempre números enteros (no decimales). Sirven para multitud de cosas, y para
+comprender su funcionamiento, he aquí algunos ejemplos:</p>
+<ul>
+<li>Cantidades (nº de veces que se ha hecho algo, dinero, etc)</li>
+<li>Estados como encendido o apagado, emulando a los interruptores (de hecho, los interruptores son un tipo de variable
+  binaria)</li>
+<li>Asignar valores numéricos a opciones (ej: 1 = opción 1, 2 = opción 2, etc)</li>
+<li>Identificadores (como números ID y otros)</li>
+</ul>
+<p>Las variables puedan actuar como condición de aparición, al igual que los interruptores y los interruptores locales, y
+utilizarse en muchos comandos de evento. Sin embargo, sólo uno de estos comandos permite modificarlas directamente:
+Operaciones de variable (Control Variables). La interfaz de este comando se compone de varios elementos.</p>
+<ul>
+<li><strong>Variable</strong>: cuál se modificará, pudiendo ser una concreta o un rango de ellas.</li>
+<li><strong>Operación</strong>: al ser un valor numérico, modificarlo implica operaciones matemáticas.<ul>
+<li><strong>Sustituir (Set)</strong>: establece directamente el valor.</li>
+<li><strong>Sumar (Add):</strong> suma al valor actual de la variable.</li>
+<li><strong>Restar (Sub)</strong>: resta al valor actual de la variable.</li>
+<li><strong>Multiplicar (Mul)</strong>: multiplica el valor actual de la variable.</li>
+<li><strong>Dividir (Div)</strong>: divide el valor actual de la variable.</li>
+<li><strong>Resto (Mod)</strong>: se le conoce como “operación módulo” en informática. Realiza una división, pero en lugar de dar
+  el cociente (resultado), usa el resto de la misma. Ejemplo: dividir 5 entre 2, daría como cociente 2 (sin tomar en
+  cuenta decimales) y su resto es 1.</li>
+</ul>
+</li>
+<li><strong>Operando</strong>: el valor con el cual se realizará la operación que modificará la variable. Hay varios tipos, algunos de
+  los cuales no tienen uso en Pokémon Essentials BES.<ul>
+<li><strong>Constante</strong>: un número entero.</li>
+<li><strong>Variable</strong>: el valor de otra variable</li>
+<li><strong>Aleatorio (Random)</strong>: un valor aleatorio dentro de un rango.</li>
+<li><del>Objeto (Item)</del></li>
+<li><del>Personaje (Actor)</del></li>
+<li><del>Enemigo (Enemy)</del></li>
+<li><strong>Personaje (Character)</strong>: el jugador o un evento, en relación a uno de estos valores.<ul>
+<li><strong>Coordenada X (Map X)</strong>: según el valor sobre la coordenada X (horizontal) en la que se encuentre. Se mide en
+  casillas, siendo la 0,0 la casilla en la esquina superior izquierda y se cuenta de izquierda a derecha.</li>
+<li><strong>Coordenada Y (Map Y)</strong>: según el valor sobre la coordenada Y (vertical) en la que se encuentre. Se mide en
+  casillas, siendo la 0,0 la casilla en la esquina superior izquierda y se cuenta de arriba hacia abajo.</li>
+<li><strong>Dirección (Direction)</strong>: en función a la dirección a la que esté mirando, habiendo cuatro valores posibles:
+  2 (abajo), 4 (izquierda), 6 (derecha) y 8 (arriba).</li>
+<li><del>Pantalla X (Screen X)</del></li>
+<li><del>Pantalla X (Screen Y)</del></li>
+<li><strong>Terreno (Terrain Tag)</strong>: el valor de la etiqueta de terreno (Terrain Tag) que tenga el tile sobre el que es</li>
+</ul>
+</li>
+<li><strong>Otros (Other)</strong><ul>
+<li><strong>ID Mapa (Map ID)</strong>: el número ID del mapa donde se encuentra el jugador.</li>
+<li><del>Nº Grupo (Party Members)</del></li>
+<li><strong>Dinero (Gold)</strong>: el dinero actual del jugador.</li>
+<li><del>Oasis (Steps)</del></li>
+<li><strong>Tiempo Jugado (Play Time)</strong>: el tiempo de juego actual.</li>
+<li><strong>Temporizador (Timer)</strong>: el tiempo que queda en el temporizador activo (en segundos).</li>
+<li><del>Nº Guardados (Save Count)</del></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Las variables se guardan en una lista, accesible sólo cuando va a elegirse qué variable afectará a un evento concreto en
+los casos mencionados antes. Cada posición en la lista tiene asignado un número y puede cambiarse su nombre para
+localizarlos con facilidad.</p>
+<p>Hay algunos interruptores prestablecidos en Pokémon Essentials BES y no deben sobrescribirse.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Nombre</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Temp Pokemon Choice</td>
+<td>Usado para guardar información temporalmente, referida a la elección de un Pokémon durante un combate. También almacena el resultado de una batalla.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Temp Move Choice</td>
+<td>Usado para guardar información temporalmente, referida a la elección de un movimiento durante un combate.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Temp Pokemon Name</td>
+<td>Usado para guardar información temporalmente, referida al nombre de un Pokémon.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Temp Move Name</td>
+<td>Usado para guardar información temporalmente, referida al nombre de un movimiento.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Temp Text Entry</td>
+<td>Usado para guardar información temporalmente, referida a la entrada de texto.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Poké Center healing ball count</td>
+<td>Se usa en el Centro Pokémon. Es la cantidad de Poké Balls que se mostrarán en la máquina de curación, que será igual al número de Pokémon que tenga el jugador en su equipo.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Starter choice</td>
+<td>Usado para recordar el Pokémon inicial que eligió el jugador. Generalmente, los valores asignados son:<ul><li>1 = Planta<li>2 = Fuego<li>3 = Agua</ul></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Apricorn being converted</td>
+<td>Usado por el artesano de bonguris. Es el número ID del bonguri que se está convirtiendo, o el número ID de la Poké Ball resultante.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Fossil being revived</td>
+<td>Usado por el restaurador de fósiles. Es el número ID del fósil que se está reviviendo, o el número de la especie del Pokémon resultante.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Elevator current floor</td>
+<td>Se usa en los mapas con ascensor, siendo el piso en el que se encuentra actualmente el ascensor. Debería modificarse este valor en los eventos de las puertas que lleven a un ascensor.</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Elevator new floor</td>
+<td>Se usa en los mapas con ascensor, siendo el piso al que quiere ir el jugador. Debe modificarse este valor en el evento de los controles del ascensor.</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Rival name</td>
+<td>Guarda el nombre del rival.</td>
+</tr>
+<tr>
+<td>13</td>
+<td>E4 defeated count</td>
+<td>Es la cantidad de veces que se ha vencido al Alto Mando y se ingresa al Hall de la Fama.</td>
+</tr>
+</tbody>
+</table>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
+      
+    
+  </body>
+</html>

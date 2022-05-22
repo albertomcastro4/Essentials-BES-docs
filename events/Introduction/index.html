@@ -1,0 +1,1383 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
+    
+    
+      
+        <title>Eventos - Essentials BES docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c382b1dc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ff6e42">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-orange" data-md-color-accent="amber">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#eventos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Essentials BES docs" class="md-header__button md-logo" aria-label="Essentials BES docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Essentials BES docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Eventos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Essentials BES docs" class="md-nav__button md-logo" aria-label="Essentials BES docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Essentials BES docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Introducción
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Conceptos básicos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Conceptos básicos" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Conceptos básicos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Archivos de la carpeta raíz
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        PBS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Creación de tilesets
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Pokémon
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pokémon" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Pokémon
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pokemon/DefPoke" class="md-nav__link">
+        Definir Pokémon
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Batallas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Batallas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Batallas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Movimientos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Habilidades
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Tipos de batallas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Objetos
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Mapas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mapas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Mapas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Definir un mapa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../maps/TerrainTags" class="md-nav__link">
+        Terrain tags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Estructuras
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Eventos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Eventos" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Eventos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="." class="md-nav__link">
+        Introducción a los eventos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SwitchesAndVariables" class="md-nav__link">
+        Interruptores y variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Eventos especiales
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Interfaces
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Interfaces" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Interfaces
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Interfaces Pokémon
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Interfaces del sistema
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Jugador
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Jugador" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Jugador
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Ajustes (Switches)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Cambiar aspecto
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Definir protagonistas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Otros
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Otros" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Otros
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Settings (Ajustes)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Debug
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Tutoriales
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tutoriales" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Tutoriales
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/CreatingTerrainTags" class="md-nav__link">
+        Crear nuevas etiquetas de terreno
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://discord.com/invite/9XynJCM" class="md-nav__link">
+        Discord
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#interfaz-principal" class="md-nav__link">
+    Interfaz principal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandos-de-evento" class="md-nav__link">
+    Comandos de evento
+  </a>
+  
+    <nav class="md-nav" aria-label="Comandos de evento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pagina-1" class="md-nav__link">
+    Página 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagina-2" class="md-nav__link">
+    Página 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagina-3" class="md-nav__link">
+    Página 3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="eventos">Eventos</h1>
+<p>Pokémon Essentials BES es una base para desarrollar juegos emulando las mecánicas de Pokémon, pero ésta funciona gracias a un programa llamado RPG Maker XP y entender el funcionamiento de este motor de juego es igual de importante.</p>
+<p>RPG Maker XP, al margen de los scripts, está diseñado para trabajar con las funciones propias del programa, sin necesidad de aprender a programar.</p>
+<p>Y el punto más importante son los eventos, los cuáles se detallan en esta página.</p>
+<h2 id="interfaz-principal">Interfaz principal</h2>
+<p><img alt="Interfaz de evento" src="../../img/events/example_event.png" width="550" /></p>
+<p>Al crear un evento en una casilla del mapa (sólo puede haber uno por casilla), en su correspondiente capa, lo primero que aparecerá será esta interfaz. Dependiendo de la versión de RPG Maker XP que se utilice, sea en español o inglés, variarán los nombres y en algunos casos, la posición de los elementos dentro de la misma.</p>
+<ul>
+<li><strong>ID y nombre del evento</strong>: a todos los eventos se les asocia un ID al momento de crearlo, lo que permite identificarlos incluso tras cambiarles los nombres, que son recomendables de utilizar pues agiliza encontrarlos y saber qué evento es.</li>
+<li><strong>Páginas del evento</strong>: todos los eventos, al crearse, se componen de una única página. Sin embargo, para eventos más complejos, se requerirá de dos o más páginas. Se utilizan para cambiar el estado del evento actual o, incluso, utilizadas de la forma correcta, permitiría tener dos o más eventos distintos en la misma casilla del mapa. Las páginas se crean en orden de izquierda a derecha, pero cuando el evento se inicie, siempre ejecutará las acciones de la página más a la derecha, salvo que ésta se encuentre bloqueada por una condición. Si ese fuera el caso, ejecutará la anterior, pero si esa tampoco cumple las condiciones, seguirá hasta que llegue a una página que en ese momento sí cumpla los requisitos para su ejecución.</li>
+<li><strong>Condiciones de aparición</strong>: los eventos (y sus diferentes páginas) pueden ejecutarse de manera inmediata (según su detonante, explicados más abajo) o pueden programarse para que sólo actúen si se cumple una condición. Existes tres tipos. Para saber más en profundidad acerca de ellos, consulta la página Interruptores y Variables.<ul>
+<li><strong>Interruptores (Switch)</strong>: tal como los interruptores de luz, tienen dos estados, encendido o apagado. Cuando está encendido, es porque se cumple una condición, y viceversa. Por ejemplo, para que un personaje diga un diálogo diferente después de realizar una acción concreta (como, por ejemplo, vencer a un líder de gimnasio), se necesita crear un interruptor. El programa guarda una lista de interruptores que se puede modificar y utilizarse a lo largo de todo el juego.</li>
+<li><strong>Interruptores locales (Self Switch)</strong>: son lo mismo que los interruptores, pero sólo afectan al mismo evento donde se activan y existe un límite de 4 (A, B, C, D). Sirven para casos sencillos que sólo afecten al propio evento; por ejemplo, si un personaje entrega un objeto, cuando se vuelva a hablar con él, ya no lo dará. Eso es porque se ha activado un interruptor, en este caso, local, que ha cambiado la página actual donde se ejecuta el evento.</li>
+<li><strong>Variables</strong>: una variable es simplemente un elemento asociado a un número y si éste tiene un valor concreto o se encuentra dentro de un rango, hará (o no) que ocurra algo. Un ejemplo sería que se necesite X cantidad de dinero para poder comprar algo y si no se tiene, no puede realizar esa acción. Al igual que con los interruptores, también se guardan en una lista que puede modificarse y usarse dentro de todo el juego.</li>
+</ul>
+</li>
+<li><strong>Movimiento autónomo</strong>: el evento, por sí sólo, puede moverse por el mapa donde se esté, en función a tres aspectos.<ul>
+<li><strong>Tipo de movimiento</strong>: existen cuatro tipos.</li>
+<li><strong>Inmóvil (Fixed)</strong>: quieto.</li>
+<li><strong>Aleatorio (Random)</strong>: se puede mover en todas las direcciones posibles, aleatoriamente.</li>
+<li><strong>Seguir (Approach)</strong>: se mueve de manera que trata de acercarse al jugador.</li>
+<li><strong>Ruta (Custom)</strong>: se mueve siguiendo una ruta predeterminada, la cual se programa en la opción “Crear Ruta (Move Route)”, que viene a ser exactamente igual que el comando de evento del mismo nombre (los comandos de evento se explican en otra sección, más abajo).</li>
+<li><strong>Velocidad</strong>: existen seis niveles de velocidad, siendo el 1 el más lento y el 6 el más rápido.</li>
+<li><strong>Frecuencia</strong>: es la frecuencia con la que se mueve el evento (tanto en movimiento como parado), habiendo seis niveles, siendo el 1 el que hará que tarde más en moverse y el 6 en el que constantemente esté moviéndose. Un ejemplo: un Pokémon volador, al batir las alas, si tuviera una frecuencia de nivel 1, quedaría muy raro, pues se mantendría en el aire sin moverse la mayor parte del tiempo.</li>
+</ul>
+</li>
+<li><strong>Opciones</strong>: relacionado al movimiento autónomo del evento, hay factores que influyen en cómo se moverá por el mapa y cómo interactuará con éste y otros eventos.<ul>
+<li><strong>Animación al moverse (Move Animation)</strong>: lo normal es que el gráfico del evento cambie al moverse, creando una animación.</li>
+<li><strong>Animación parado (Stop Animation)</strong>: un Pokémon volador, sin moverse de su posición, estaría batiendo sus alas; en cambio, una persona, se mantendría quieta en su sitio.</li>
+<li><strong>Dirección fija (Direction Fix)</strong>: cuando un evento se mueve, lo normal es que, si se mueve a la derecha, su gráfico cambie a estar mirando en esa dirección, y así con todas. Pero pueden darse casos donde se quiera que un evento siempre se mantenga mirando en una dirección, independientemente de hacia donde se mueva. Esto sirve también para, por ejemplo, en los gráficos de los personajes u otros elementos animados, añadir diversas poses y evitar que al moverse muestre las que no debería.</li>
+<li><strong>Atravesable (Through)</strong>: activando esta opción, el evento podrá pasar por encima a otros eventos y elementos del mapa, independientemente si estos originalmente podían atravesarse o no.</li>
+<li><strong>Sobre el personaje (Always on Top)</strong>: es similar a la anterior, pero únicamente pasará por encima de los gráficos que, desde el principio, podían atravesarse. Un ejemplo: cuando el jugador pasa por detrás de un árbol, es ocultado parcialmente por el gráfico de la copa del árbol; con esta opción activada, esa parte oculta ahora se vería por encima. Sin embargo, si intentara pasar a través del gráfico de la parte baja del árbol, no podría, pues éste se configura generalmente para que bloquee el paso en todas las direcciones; tampoco puede pasar por encima de otros eventos. Debido a esto, para usarse correctamente, debe hacerse conjuntamente junto con la opción Atravesable (Through).</li>
+</ul>
+</li>
+<li><strong>Detonante de inicio (Trigger)</strong>: es el método por el cual un evento puede activarse, en conjunto con las condiciones del evento.<ul>
+<li><strong>Pulsar Aceptar (Action Button)</strong>: al interactuar directamente, pulsando un botón.</li>
+<li><strong>Toparse con héroe (Player Touch)</strong>: cuando el jugador toca al evento.</li>
+<li><strong>Colisionar (Event Touch)</strong>: cuando el evento toca al jugador. La diferencia con el anterior radica en que, aquí, si el jugador estuviese quieto, el evento se activaría; si tuviese la otra, no. Un ejemplo sería un evento que persiguiese al jugador y que, al éste tocarle, iniciara un combate.</li>
+<li><strong>Inicio automático (Autorun)</strong>: nada más entrar a un mapa, el evento se ejecutará, impidiendo realizar cualquier acción fuera de lo programado en el evento, hasta que éste termine.</li>
+<li><strong>Proceso paralelo (Parallel Process)</strong>: se ejecuta nada más entrar al mapa, pero a diferencia del inicio automático, lo hará de forma paralela mientras el jugador u otros eventos realizan acciones. Sin embargo, no todos los comandos de evento permiten ejecutarse en paralelo; por ejemplo, los diálogos detendrán todo lo demás mientras estén en pantalla, salvo que se utilicen scripts específicos, externos al programa y a la propia base de Pokémon Essentials BES.</li>
+</ul>
+</li>
+<li><strong>Gráfico</strong>: es el gráfico del evento, que debe encontrarse en la carpeta Graphics/Characters.</li>
+<li><strong>Contenidos del evento (List of Events Commands)</strong>: este es el núcleo del evento, donde se programan las acciones que realiza y se añaden mediante comandos de evento.</li>
+</ul>
+<h2 id="comandos-de-evento">Comandos de evento</h2>
+<p>Dentro de RPG Maker XP existen varios comandos por defecto, que realizan acciones concretas dentro de los eventos. Estos se reparten en tres páginas.</p>
+<p>En Pokémon Essentials BES algunos de estos comandos están modificados o no tienen uso.</p>
+<h3 id="pagina-1">Página 1</h3>
+<table>
+<thead>
+<tr>
+<th>Nombre del comando</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mostrar mensaje (Show Text)</td>
+<td>Muestra textos en pantalla. Para saber más sobre cómo sacar el máximo potencial a este comando, consulta la página de Mostrar mensaje.</td>
+</tr>
+<tr>
+<td>Mostrar elecciones (Show Choices)</td>
+<td>Muestra hasta un máximo de 4 opciones y permite elegir lo que pasará si se pulsa el botón asignado a Cancelar mientras estén en pantalla (cierra el menú de opciones, elige una de las opciones o se crea una rama que actúa como una quinta opción). Para mostrar más de 4 opciones, puede hacerse a través de comandos de texto dentro del comando de evento Mostrar mensaje.</td>
+</tr>
+<tr>
+<td>Proceso de entrada numérica (Input Number)</td>
+<td>Permite al jugador asignar un valor a una variable, estableciendo previamente el número máximo de dígitos que tendrá. Se usa para, por ejemplo, insertar una contraseña numérica.</td>
+</tr>
+<tr>
+<td>Opciones de mensaje (Change Text Options)</td>
+<td>Cambia la posición de la caja de texto (colocándola en la parte superior, media o inferior de la ventana del juego), estando por defecto en la zona baja. También permite ocultarla, dejando sólo el texto en pantalla. Estos cambios se mantendrán en todos los mensajes del juego hasta que vuelva a modificarse.</td>
+</tr>
+<tr>
+<td>Asignar teclas (Button Input Processing)</td>
+<td>...</td>
+</tr>
+<tr>
+<td>Esperar (Wait)</td>
+<td>Crea una pausa dentro del evento, cuya duración puede modificarse. El tiempo en se mide en frames, siendo 20 frames equivalentes a 1 segundo.</td>
+</tr>
+<tr>
+<td>Poner anotación (Comment)</td>
+<td>Sirve para dejar anotaciones dentro del evento, a modo de guía. De forma general, estas notas sólo se verán en el editor; pero en Pokémon Essentials BES, algunas se utilizan de forma especial y se convierten en comandos de evento cuando se compila el juego, como, por ejemplo, en un evento de entrenador.</td>
+</tr>
+<tr>
+<td>Condiciones y efectos (Conditional Branch)</td>
+<td>Crea una condición dentro del evento, donde si se cumple una condición concreta, ocurre algo, y viceversa, pudiendo añadir una excepción. Existen varios tipos de condiciones, que se reparten en cuatro páginas, pero no todos tienen uso en Pokémon Essentials BES.<br><strong>Página 1</strong>:<ul><li><strong>Interruptor (Switch)</strong>: qué interruptor y si está encendido o apagado.<li><strong>Variable</strong>: qué variable y su valor con respecto a otro.<li><strong>Interruptor local (Self Switch)</strong>: qué interruptor local y si está encendido o apagado.<li><strong>Temporizador</strong>: si el tiempo que marca el temporizador está por encima o por debajo de un valor concreto.</ul><del>Página 2</del><br><strong>Página 3</strong><ul><del>Enemy (Enemigo)</del><li><strong>Sprite (Character)</strong>: si el jugador o un evento están mirando en una dirección concreta.</ul><strong>Página 4</strong>:<ul><li><strong>Dinero (Gold)</strong>: si la cantidad de dinero del jugador es mayor o menor a un valor.<li><del>Objetos (Item)</del><li><del>Armas (Weapon)</del><li><del>Protector (Armor)</del><li><strong>Tecla (Button)</strong>: si una tecla determinada es pulsada.<li><strong>Script</strong>: si un script concreto está ejecutándose.</td>
+</tr>
+<tr>
+<td>Comenzar ciclo (Loop)</td>
+<td>Crea un bucle dentro del evento, haciendo que se repita constantemente todo lo que esté dentro de este bucle.</td>
+</tr>
+<tr>
+<td>Romper ciclo (Break Loop)</td>
+<td>Interrumpe un bucle, permitiendo que continúe el evento desde ese punto.</td>
+</tr>
+<tr>
+<td>Parar proceso de evento (Exit Event Processing)</td>
+<td>Detiene el procesamiento de los comandos del evento, incluso si hay comandos después de éste.</td>
+</tr>
+<tr>
+<td>Borrar evento temporalmente (Erase Event)</td>
+<td>Borra temporalmente el evento, mientras el jugador permanezca dentro del mapa donde está. Si sale y vuelve a entrar, el evento reaparecerá.</td>
+</tr>
+<tr>
+<td>Llamar a evento común (Call Common Event)</td>
+<td>Llama a un evento común y lo ejecuta. Un evento común es uno que se usará en muchas ocasiones y no tendrá cambios, por lo que en lugar de copiarlo y pegarlo múltiples veces, es mejor crearlo en la pestaña "Eventos comunes" de la Base de Datos.</td>
+</tr>
+<tr>
+<td>Elegir etiqueta (Label)</td>
+<td>Crea una etiqueta y se le asigna un nombre, que se utiliza para dar saltos dentro de la lista de comandos del evento, sin tener que ejecutarlos todos en orden.</td>
+</tr>
+<tr>
+<td>Ir a etiqueta (Jump to Label)</td>
+<td>Salta a la etiqueta designada y ejecuta los comandos de evento que hay debajo de ella.</td>
+</tr>
+<tr>
+<td>Operaciones de interruptor (Control Switches)</td>
+<td>Activa o desactiva un interruptor concreto o un rango de ellos dentro de la lista de interruptores.</td>
+</tr>
+<tr>
+<td>Operaciones de variable (Control Variables)</td>
+<td>Cambia el valor de una variable concreta o un rango de ellas dentro de la lista de variables. Para saber más acerca del uso de las variables, consulta la página Interruptores y Variables.</td>
+</tr>
+<tr>
+<td>Operaciones de interruptor local (Control Self Switch)</td>
+<td>Activa o desactiva un interruptor local.</td>
+</tr>
+<tr>
+<td>Operaciones de tiempo (Control Timer)</td>
+<td>Inicia un temporizador cuya cuenta va bajando, o detiene uno ya existente y lo hace desaparecer. Si el temporizador llega a 0, seguirá en pantalla hasta que este comando lo borre.</td>
+</tr>
+<tr>
+<td>Cambiar dinero (Change Gold)</td>
+<td>Aumenta o reduce la cantidad de dinero del jugador, en una cantidad concreta o en función a una variable.</td>
+</tr>
+<tr>
+<td><del>Cambiar objetos (Change Items)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Cambiar armamento (Change Weapons)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Cambiar protector (Change Armor)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Cambiar grupo (Change Party Member)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td>Cambiar skin del sistema (Change Windowskin)</td>
+<td>Cambia el gráfico de la caja de texto.</td>
+</tr>
+<tr>
+<td>Cambiar música de batalla (Change Battle BGM)</td>
+<td>Cambia la música que sonará en el siguiente combate, que debe estar guardada en la capeta Audio/BGM.</td>
+</tr>
+<tr>
+<td>Cambiar música de victoria (Change Battle End ME)</td>
+<td>Cambia la música que sonará tras vencer el siguiente combate, que debe estar guardada en la carpeta Audio/ME.</td>
+</tr>
+<tr>
+<td>Cambiar permisos de guardado (Change Save Access)</td>
+<td>Permite o prohíbe al jugador guardar la partida, ocultando la opción en el menú.</td>
+</tr>
+<tr>
+<td>Cambiar permisos de menú (Change Menu Access)</td>
+<td>Permite o prohíbe al jugador abrir el Menú de Pausa.</td>
+</tr>
+<tr>
+<td>Cambiar permisos de encuentros (Change Encounter)</td>
+<td>Permite o prohíbe los encuentros con Pokémon salvajes.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pagina-2">Página 2</h3>
+<table>
+<thead>
+<tr>
+<th>Nombre del comando</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Teletransportar (Transfer Player)</td>
+<td>Mueve al jugador a una ubicación diferente dentro del mismo mapa o de otro. Se puede elegir la posición de forma directa (lo más común y sencillo) o mediante variables (complejo y sólo útil para casos muy específicos). Además, permite elegir en qué dirección estará mirando el jugador cuando llegue a su destino, así como si la transición será directa o habrá un efecto de fundido.</td>
+</tr>
+<tr>
+<td>Elegir posición de evento (Set Event Location)</td>
+<td>Similar al comando anterior, pero sólo para eventos y dentro del mismo mapa, pudiendo además intercambiar la posición de un evento con otro.</td>
+</tr>
+<tr>
+<td>Scroll de mapa (Scroll Map)</td>
+<td>Cambia la parte del mapa en la que se centra la pantalla, que normalmente está enfocada en el jugador, pudiendo elegir la dirección, la distancia y la velocidad. La distancia se mide en casillas del mapa y se empiezan a contar desde el borde de la pantalla opuesto al que se quiere desplazar. Por ejemplo, al hacer el desplazamiento hacia abajo, el número de casillas que se moverá comienza a contarse desde el borde superior, desapareciendo de la visión del jugador esa zona primero. El tamaño de la ventana de juego de Pokémon Essentials BES, por defecto, muestra 15 casillas de ancho x 11 de alto, más la mitad de otra casilla adicional por cada lado.</td>
+</tr>
+<tr>
+<td>Cambiar gráficos de mapa (Change Map Settings)</td>
+<td>Cambia el gráfico de panorama o niebla en el mapa actual, el cual inicialmente está definido en la pestaña Tilesets de la Base de Datos. La opción de cambiar el fondo de batalla desde este comando no funciona en Pokémon Essentials BES.</td>
+</tr>
+<tr>
+<td>Cambiar tono de niebla (Change Fog Color Tone)</td>
+<td>Cambia el color de la niebla y el tiempo de la transición del color original al nuevo (en frames, 20 = 1 segundo).</td>
+</tr>
+<tr>
+<td>Cambiar opacidad de niebla (Change Fog Opacity)</td>
+<td>Cambia la opacidad de la niebla, desde el valor 0 (transparente) al 255 (opaca) y el tiempo de la transición de la opacidad inicial a la nueva (en frames, 20 = 1 segundo).</td>
+</tr>
+<tr>
+<td>Mostrar animación de mapa (Show Animation)</td>
+<td>Reproduce una animación centrada en el jugador o en un evento.</td>
+</tr>
+<tr>
+<td>Cambiar transparencia (Change Transparent Flag)</td>
+<td>Hace visible o invisible al jugador.</td>
+</tr>
+<tr>
+<td>Mover evento (Set Move Route)</td>
+<td>Establece movimientos o acciones para el jugador o un evento, teniendo la opción de repetirlos en bucle o ignorarlos si el evento, por alguna razón, no puede ejecutarlos. La lista de posibles acciones es la siguiente.<ul><li><strong>Mover abajo (Move Down)</strong>: se mueve un paso hacia abajo.<li><strong>Mover izquierda (Move Left)</strong>: se mueve un paso hacia la izquierda.<li><strong>Mover derecha (Move Right)</strong>: se mueve un paso hacia la derecha.<li><strong>Mover arriba (Move Up)</strong>: se mueve un paso hacia arriba.<li><strong>Mover abajo-izquierda (Move Lower Left)</strong>: se mueve un paso en diagonal abajo a la izquierda.<li><strong>Mover abajo-derecha (Move Lower Right)</strong>: se mueve un paso en diagonal abajo a la derecha.<li><strong>Mover arriba-izquierda (Move Upper Left)</strong>: se mueve un paso en diagonal arriba a la izquierda.<li><strong>Mover arriba-derecha (Move Upper Right)</strong>: se mueve un paso en diagonal arriba a la derecha.<li><strong>Movimiento aleatorio (Move at Random)</strong>: se mueve un paso en cualquier dirección posible, de forma aleatoria.<li><strong>Seguir a héroe (Move toward Player)</strong>: el evento se acerca al jugador un paso, donde quiera que esté.<li><strong>Huir del héroe (Move away from Player)</strong>: el evento se aleja del jugador un paso, donde quiera que esté.<li><strong>Avanzar un paso (1 Step Forward)</strong>: avanza un paso en la dirección en la que se esté mirando.<li><strong>Retroceder un paso (1 Step Backward)</strong>: retrocede un paso, sin dejar de mirar en la dirección en la que estaba antes de moverse.<li><strong>Saltar (Jump)</strong>: da un salto. En el eje X realiza saltos laterales y cuando el valor es positivo, va hacia la derecha; y si es negativo, va a la izquierda. En el eje Y realiza saltos verticales, yendo hacia abajo cuando el valor es positivo y hacia arriba cuando es negativo. Si se combinan, se harán saltos en diagonal. Los valores, en ambos casos, representan el número de casillas de distancia que hay entre la posición actual del evento y su destino una vez caiga tras realizar el salto. Si el valor es 0,0, hará el salto en la misma casilla donde esté.<li><strong>Esperar (Wait)</strong>: crea una pausa, que se mide en frames (20 frames = 1 segundo). Para alternar entre las distintas acciones, sin que las realice todas corriendo, con una espera de 4 frames suele ser suficiente.<li><strong>Mirar abajo (Turn Down)</strong>: mira hacia abajo.<li><strong>Mirar izquierda (Turn Left)</strong>: mira hacia la izquierda.<li><strong>Mirar derecha (Turn Right)</strong>: mira hacia a la derecha.<li><strong>Mirar arriba (Turn Up)</strong>: mira hacia arriba.<li><strong>Girar 90° a la derecha (Turn 90° Right)</strong>: gira 90° a la derecha con respecto a la dirección en la que está mirando actualmente.<li><strong>Girar 90° a la izquierda (Turn 90° Left)</strong>: gira 90° a la izquierda con respecto a la dirección en la que está mirando actualmente.<li><strong>Rotar 180° (Turn 180°)</strong>: gira 180° con respecto a la dirección en la que está mirando actualmente.<li><strong>Girar 90° a la izquierda o a la derecha (Turn 90° Right or Left)</strong>: gira 90° a la izquierda o a la derecha con respecto a la dirección en la que está mirando actualmente, de forma aleatoria.<li><strong>Curso aleatorio (Turn at Random)</strong>: gira 90° o 180° en cualquier dirección, de forma aleatoria.<li><strong>Mirar al héroe (Turn toward Player)</strong>: mira en la dirección en la que se encuentra el jugador, independientemente de dónde esté.<li><strong>Mirar contrario al héroe (Turn away from Player)</strong>: mira en la dirección contraria en la que se encuentra el jugador, independientemente de dónde esté.<li><strong>Activar/Desactivar interruptor (Switch ON/OFF)</strong>: enciende o apaga un interruptor.<li><strong>Cambiar velocidad (Change Speed)</strong>: cambia la velocidad de movimiento del evento.<li><strong>Cambiar frecuencia (Change Freq)</strong>: cambia la frecuencia de movimiento del evento.<li><strong>Animación en movimiento ON/OFF (Move Animation ON/OFF)</strong>: activa o desactiva la animación cuando el evento se mueve.<li><strong>Animación parado ON/OFF (Stop Animation ON/OFF)</strong>: activa o desactiva la animación cuando el evento está quieto.<li><strong>Dirección fija ON/OFF (Direction Fix ON/OFF)</strong>: activa o desactiva la opción de que el gráfico del evento siempre esté mirando en una dirección, independientemente de a qué cual se mueva.<li><strong>Modo fantasma ON/OFF (Through ON/OFF)</strong>: activa o desactiva la opción de que el evento pueda pasar por encima de otros eventos y los elementos del mapa.<li><strong>Traer al frente ON/OFF (Always on Top ON/OFF)</strong>: activa o desactiva la opción de que el evento pase por encima de tiles del mapa que tengan una prioridad que, de otra forma, haría que el evento pasara por debajo de él.<li><strong>Cambiar gráficos (Change Graphic)</strong>: cambia el gráfico del evento por otro.<li><strong>Cambiar opacidad (Change Opacity)</strong>: cambia la opacidad del gráfico del evento, desde el valor 0 (transparente) al 255 (opaco).<li><strong>Cambiar paleta (Change Blending)</strong>: cambia el modo de fusión del gráfico del evento (apenas tiene algún uso).<li><strong>Reproducir efecto sonoro (Play SE)</strong>: reproduce un efecto de sonido de la carpeta Audio/SE, donde se deben guardar estos audios.<li><strong>Script</strong>: llama a un script.</td>
+</tr>
+<tr>
+<td>Esperar a fin de movimiento (Wait for Move’s Completion)</td>
+<td>Se usa después de "Mover evento" para hacer que el evento haga todas las acciones programadas en él, antes de continuar con el siguiente comando del evento. Si no se utiliza, el evento continuará mientras, además, ejecuta las órdenes del comando "Mover evento", lo que puede dar errores si no se planifica para que ocurra de esa manera.</ul></td>
+</tr>
+<tr>
+<td><del>Preparar transición (Prepare to Transition)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Ejecutar transición (Execute Transition)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td>Cambiar tono de pantalla (Change Screen Color Tone)</td>
+<td>Cambia el tono de la pantalla, hasta que el jugador se mueva a un mapa diferente, así como el tiempo de la transición del color original al nuevo (en frames, 20 = 1 segundo).</td>
+</tr>
+<tr>
+<td>Flash de pantalla (Screen Flash)</td>
+<td>Similar al anterior, pero de forma temporal, utilizándose sobre todo para mostrar destellos en pantalla.</td>
+</tr>
+<tr>
+<td>Sacudir pantalla (Screen Shake)</td>
+<td>Sacude la pantalla, pudiendo elegir la intensidad, la velocidad y el tiempo de duración (en frames, 20 = 1 segundo)</td>
+</tr>
+<tr>
+<td>Mostrar imagen (Show Picture)</td>
+<td>Muestra una imagen en pantalla, que debe estar en la carpeta Graphics/Pictures. Puede haber varias a la vez y a cada una se le debe asignar un número distinto, pues si tienen el mismo, la última imagen en mostrarse sustituirá a la anterior con el mismo valor. Además, hay varios parámetros que pueden modificarse.<ul><li><strong>Punto inicial</strong>: coloca la imagen coincidiendo con la esquina superior izquierda de la pantalla o la centra en la misma esquina, partiendo del centro de la propia imagen. Es el punto desde el que las coordenadas serán calculadas al colocar la imagen.<li><strong>Coordenadas</strong>: pueden elegirse manualmente o por variables. El eje X corresponde al horizontal y el Y al vertical, situándose el punto central de este eje (0,0) en la esquina superior izquierda. Los valores de las coordenadas corresponden a píxeles y hay que tener en cuenta que el tamaño de la ventana de juego de Pokémon Essentials BES es, por defecto, de 512x384 píxeles, además que, dependiendo del punto de origen, moverá la imagen desde su esquina superior izquierda o su propio centro. Para que una imagen con punto de origen centrado quede en el centro de la pantalla, las coordenadas deben ser X = 256, Y = 192.<li><strong>Tamaño en % (Zoom)</strong>: deforma la imagen lateral o verticalmente.<li><strong>Opacidad</strong>: cambia la opacidad, desde el valor 0 (transparente) al 255 (opaca).<li><strong>Paleta (Blending)</strong>: es la forma en la que se muestran los colores de la imagen, casi siempre dejándose en modo Normal (los otros dos son modos de fusión que apenas tienen uso).</td>
+</tr>
+<tr>
+<td>Mover imagen (Move Picture)</td>
+<td>Mueve o modifica una imagen que ya esté en pantalla, con casi las mismas opciones que el comando anterior. El desplazamiento se realiza desde la posición inicial hasta la final dentro de un periodo de tiempo determinado (en frames, 20 = 1 segundo). La coordenada en el eje X mueve la imagen lateralmente a la derecha (valor positivo) o a la izquierda (valor negativo); la Y lo hará verticalmente hacia abajo (valor positivo) y hacia arriba (valor negativo).</td>
+</tr>
+<tr>
+<td>Rotar imagen (Rotate Picture)</td>
+<td>Hace que una imagen mostrada comience a rotar a una velocidad concreta en dirección antihoraria (si el valor es positivo) u horaria (si el valor es negativo), en relación a su punto de origen (su esquina superior izquierda o el propio centro de la imagen).</td>
+</tr>
+<tr>
+<td>Cambiar tono de imagen (Change Picture Color Tone)</td>
+<td>Cambia los colores de una imagen mostrada y el tiempo de la transición del color original al nuevo (en frames, 20 = 1 segundo).</td>
+</tr>
+<tr>
+<td>Borrar imagen (Erase Picture)</td>
+<td>Borra una imagen que se esté mostrando en pantalla.</td>
+</tr>
+<tr>
+<td>Opciones de clima (Set Weather Effects)</td>
+<td>Crea un determinado clima. Este comando solo muestra lluvia, tormenta o nevada; para otros climas, es necesario modificar un script.</td>
+</tr>
+<tr>
+<td>Reproducir música (Play BGM)</td>
+<td>Reproduce una melodía ubicada de la carpeta Audio/BGM, donde se deben guardar todas las melodías largas. No pueden estar sonando a la vez dos BGM.</td>
+</tr>
+<tr>
+<td>Decrecer música (Fade Out BGM)</td>
+<td>Decrece la melodía que está sonando hasta detenerla, pudiendo elegir el tiempo que tarda en hacerlo.</td>
+</tr>
+<tr>
+<td>Reproducir sonido (Play BGS)</td>
+<td>Reproduce un sonido de fondo de la carpeta Audio/BGS, donde se deben guardar estos sonidos. No pueden estar sonando a la vez dos BGS.</td>
+</tr>
+<tr>
+<td>Decrecer sonido (Fade Out BGS)</td>
+<td>Decrece el sonido de fondo que está escuchándose hasta detenerse, pudiendo elegir el tiempo que tarda en hacerlo.</td>
+</tr>
+<tr>
+<td>Memorizar música/sonido (Memorize BGM/BGS)</td>
+<td>Memoriza la melodía y el sonido de fondo que se está reproduciendo actualmente.</td>
+</tr>
+<tr>
+<td>Reproducir memorizados (Restore BGM/BGS)</td>
+<td>Reproduce la melodía y el sonido de fondo memorizado con el comando anterior.</td>
+</tr>
+<tr>
+<td>Reproducir efecto musical (Play ME)</td>
+<td>Reproduce una pieza musical de la carpeta Audio/ME, donde se deben guardar este tipo de composiciones. Estos archivos son melodías cortas que, a diferencia de los BGM o los BGS, el programa no los repetirá en bucle una vez termine la melodía.</td>
+</tr>
+<tr>
+<td>Reproducir efecto sonoro (Play SE)</td>
+<td>Reproduce un efecto de sonido de la carpeta Audio/SE, donde se deben guardar estos audios. Al igual que los ME, son cortos y no se repetirán en bucle una vez terminen.</td>
+</tr>
+<tr>
+<td>Parar efecto sonoro (Stop SE)</td>
+<td>Detiene el efecto de sonido mientras aún está sonando.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pagina-3">Página 3</h3>
+<table>
+<thead>
+<tr>
+<th>Nombre del comando</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><del>Combatir (Battle Processing)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Insertar tienda (Shop Processing)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Poner nombre personaje (Name Input Processing)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Cambiar PV (Change HP)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Cambiar PM (Change SP)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Cambiar estado (Change State)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td>Curar todo (Recover All)</td>
+<td>Restaura completamente la salud de todo el equipo Pokémon del jugador.</td>
+</tr>
+<tr>
+<td><del>Cambiar experiencia (Change EXP)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Cambiar nivel (Change Level)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Cambiar parámetros (Change Parameters)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Cambiar habilidades (Changes Skills)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Cambiar equipamiento (Change Equipment)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Cambiar nombre personaje (Change Actor Name)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Cambiar profesión (Change Actor Class)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Cambiar gráfico personaje (Change Actor Graphic)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Cambiar PV enemigo (Change Enemy HP)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Cambiar PM enemigo (Change Enemy SP)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Cambiar estado enemigo (Change Enemy State)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Curar todo a enemigo (Enemy Recover All)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Aparición enemiga (Enemy Appearance)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Transformación enemiga (Enemy Transform)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Mostrar animación de batalla (Show Battle Animation)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Recibir daño (Deal Damage)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Forzar acción (Force Action)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td><del>Parar batalla (Abort Battle)</del></td>
+<td>...</td>
+</tr>
+<tr>
+<td>Llamar a menú (Call Menu Screen)</td>
+<td>Abre el Menú de Pausa.</td>
+</tr>
+<tr>
+<td>Llamar a menú Guardar (Call Save Screen)</td>
+<td>Pide al jugador guardar la partida.</td>
+</tr>
+<tr>
+<td>Fin del juego (Game Over)</td>
+<td>Lleva a la pantalla donde un jugador acaba tras perder un combate, mostrando un mensaje.</td>
+</tr>
+<tr>
+<td>Volver a pantalla de título (Return to Title Screen)</td>
+<td>Envía al jugador a la pantalla inicial, donde se encuentran las opciones de Continuar, Partida Nueva, Opciones y Salir del Juego.</td>
+</tr>
+<tr>
+<td>Llamar a script (Script)</td>
+<td>Llama a un script que esté configurado dentro del código del juego, accesible a través del Editor de Script.</td>
+</tr>
+</tbody>
+</table>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
+      
+    
+  </body>
+</html>

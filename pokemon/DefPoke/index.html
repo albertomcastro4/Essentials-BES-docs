@@ -1,0 +1,1119 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
+    
+    
+      
+        <title>Definir un Pokémon - Essentials BES docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c382b1dc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ff6e42">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-orange" data-md-color-accent="amber">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#definir-un-pokemon" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Essentials BES docs" class="md-header__button md-logo" aria-label="Essentials BES docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Essentials BES docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Definir un Pokémon
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Essentials BES docs" class="md-nav__button md-logo" aria-label="Essentials BES docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Essentials BES docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Introducción
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Conceptos básicos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Conceptos básicos" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Conceptos básicos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Archivos de la carpeta raíz
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        PBS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Creación de tilesets
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Pokémon
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pokémon" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Pokémon
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="." class="md-nav__link">
+        Definir Pokémon
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Batallas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Batallas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Batallas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Movimientos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Habilidades
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Tipos de batallas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Objetos
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Mapas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mapas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Mapas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Definir un mapa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../maps/TerrainTags" class="md-nav__link">
+        Terrain tags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Estructuras
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Eventos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Eventos" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Eventos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../events/Introduction" class="md-nav__link">
+        Introducción a los eventos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../events/SwitchesAndVariables" class="md-nav__link">
+        Interruptores y variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Eventos especiales
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Interfaces
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Interfaces" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Interfaces
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Interfaces Pokémon
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Interfaces del sistema
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Jugador
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Jugador" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Jugador
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Ajustes (Switches)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Cambiar aspecto
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Definir protagonistas
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Otros
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Otros" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Otros
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Settings (Ajustes)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Debug
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Tutoriales
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tutoriales" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Tutoriales
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/CreatingTerrainTags" class="md-nav__link">
+        Crear nuevas etiquetas de terreno
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://discord.com/invite/9XynJCM" class="md-nav__link">
+        Discord
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definir-una-especie-base" class="md-nav__link">
+    Definir una especie base
+  </a>
+  
+    <nav class="md-nav" aria-label="Definir una especie base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contenido-obligatorio" class="md-nav__link">
+    Contenido obligatorio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenido-opcional" class="md-nav__link">
+    Contenido opcional
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graficos-y-sonidos" class="md-nav__link">
+    Gráficos y sonidos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formas-alternativas" class="md-nav__link">
+    Formas alternativas
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="definir-un-pokemon">Definir un Pokémon</h1>
+<p>Definir un Pokémon es el equivalente a decirle a tu juego que dicho Pokémon existe; implica la descripción de su nombre, tipo, ataques y otras características destacables del mismo. Un Pokémon puede tener varias especies, en cuyo caso estaremos hablando de una especie base y sus distintas formas, que trabajarán modificando la misma. </p>
+<h2 id="definir-una-especie-base">Definir una especie base</h2>
+<p>La especie base se define en el PBS pokemon.txt tal y como sale a continuación. Como se puede observar, es una sección iniciada por el número ID del Pokémon, es decir, su número en la Pokédex nacional (en este caso, [1] ), dividida en diferentes subsecciones.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[1]
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Name=Bulbasaur
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>InternalName=BULBASAUR
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Type1=GRASS
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Type2=POISON
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>BaseStats=45,49,49,45,65,65
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>GenderRate=FemaleOneEighth
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>GrowthRate=Parabolic
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>BaseEXP=64
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>EffortPoints=0,0,0,0,1,0
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Rareness=45
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>Happiness=70
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>Abilities=OVERGROW
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>HiddenAbility=CHLOROPHYLL
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>Moves=1,TACKLE,3,GROWL,7,LEECHSEED,9,VINEWHIP,13,POISONPOWDER,13,SLEEPPOWDER,15,TAKEDOWN,19,RAZORLEAF,21,SWEETSCENT,25,GROWTH,27,DOUBLEEDGE,31,WORRYSEED,33,SYNTHESIS,37,SEEDBOMB
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>EggMoves=AMNESIA,CHARM,CURSE,ENDURE,GIGADRAIN,GRASSWHISTLE,GRASSYTERRAIN,INGRAIN,LEAFSTORM,MAGICALLEAF,NATUREPOWER,PETALDANCE,POWERWHIP,SKULLBASH,SLUDGE
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>Compatibility=Monster,Grass
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>StepsToHatch=5355
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>Height=0.7
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>Weight=6.9
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>Color=Green
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>Habitat=Grassland
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>RegionalNumbers=1,231
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>Kind=Seed
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>Pokedex=Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun&#39;s rays, the seed grows progressively larger.
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>BattlerPlayerY=0
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>BattlerEnemyY=25
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>BattlerAltitude=0
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>Evolutions=IVYSAUR,Level,16
+</code></pre></div>
+<p>En la definición de una especie existen líneas necesarias y líneas opcionales aunque, en la práctica, se copian y pegan especies ya definidas y por tanto los datos opcionales suelen estar presentes. En caso de no necesitarlos, se puede borrar la línea o incluso lo que aparece tras el símbolo de igual.</p>
+<h3 id="contenido-obligatorio">Contenido obligatorio</h3>
+<p>Cada especie base debe contener obligatoriamente todas las líneas indicadas en la tabla de debajo, aunque pueden disponerse en cualquier orden. A continuación, se detallan los posibles contenidos de cada línea.</p>
+<table>
+<thead>
+<tr>
+<th>Dato</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>El nombre del Pokémon y cómo se mostrará en el juego.</td>
+</tr>
+<tr>
+<td>InternalName</td>
+<td>El nombre interno. Es el que se utiliza en el código para hacer referencia a sí mismo. No se mostrará en el juego. Se escribe siempre en mayúsculas sin espacios.</td>
+</tr>
+<tr>
+<td>Type1<br>Type2</td>
+<td>Los tipos del Pokémon, referidos por su nombre interno. El tipo 2 es opcional.</td>
+</tr>
+<tr>
+<td>BaseStats</td>
+<td>Características base del Pokémon. Seis valores del 0 al 255, separados por comas. Cada uno corresponde a:<br><code>PS, Ataque, Defensa, Velocidad, Ataque especial, Defensa especial</code></td>
+</tr>
+<tr>
+<td>GenderRate</td>
+<td>La probabilidad de que un Pokémon tenga determinado género. Debe ser una de las siguientes opciones:<br><ul><li>AlwaysMale (Siempre macho)</li><li>AlwaysFemale (Siempre hembra)</li><li>FemaleOneEight (12.5 % de hembra)</li><li>Female25Percent (25 % de hembra)</li><li>Female50Percent (50 % de hembra)</li><li>Female75Percent (75 % de hembra)</li><li>FemaleSevenEights (87.5 % de hembra)</li><li>Genderless (Sin sexo) </li></ul></td>
+</tr>
+<tr>
+<td>GrowthRate</td>
+<td>El ratio al que el Pokémon gana experiencia, es decir, a qué velocidad consigue la experiencia que necesita para subir de nivel. La seguirán todas sus evoluciones, y debe de ser una de las siguientes opciones:<br><ul><li>Fast (Rápido): Los Pokémon en este grupo necesitan 800.000 puntos de experiencia para alcanzar el nivel 100. Muchos Pokémon tipo normal o hada pertenecen a este grupo; incluye Pokémon como Azurill, Mawile o Spoink.</li><li>Medium o Medium Fast (Medio): Los Pokémon en este grupo necesitan 1.000.000 puntos de experiencia para alcanzar el nivel 100. Es uno de los grupos más numerosos. Incluye Pokémon como Zubat, Eevee o Pikachu.</li><li>Slow (Lento): Los Pokémon en este grupo necesitan 1.250.000 puntos de experiencia para alcanzar el nivel 100. Está reservado para Pokémon raros, legendarios o pseudo-legendarios. Incluye Pokémon como Magikarp, Zapdos o Larvitar.</li><li>Parabolic o Medium Slow (Parabólica): Los Pokémon en este grupo necesitan 1.059.860 puntos de experiencia para alcanzar el nivel 100, pero suben de nivel más rápidamente a niveles bajos y viceversa. Es uno de los grupos más numerosos. Incluye Pokémon como los iniciales, Mareep o Fletchling.</li><li>Erratic (Errática): Los Pokémon de este grupo necesitan 600.000 puntos de experiencia para alcanzar el nivel 100, pero suben de nivel más rápidamente a niveles altos y viceversa. Incluye Pokémon como Applin, Feebas o Swablu.</li><li>Fluctuating(Fluctuante): Los Pokémon de este grupo necesitan 1.640.000 puntos de experiencia para alcanzar el nivel 100. Suben rápido de nivel a niveles bajos, pero su crecimiento comienza a ralentizarse a partir del nivel 36. Incluye Pokémon como Drifloon, Shroomish y Gulpin, y no suele ser usado.</ul><br>Para más información respecto a las fórmulas y las gráficas de cada una de las diferentes curvas, visita <a href="https://www.wikidex.net/wiki/Experiencia#Niveles">el siguiente enlace de Wikidex</a></td>
+</tr>
+<tr>
+<td>BaseEXP</td>
+<td>La experiencia base que se gana al derrotar a este Pokémon. Se modifica después de acuerdo a la fórmula de final de batalla y variables como el nivel del rival. Es un número entre 0 y 65.535.</td>
+</tr>
+<tr>
+<td>EfforPoints</td>
+<td><a href="https://www.wikidex.net/wiki/Puntos_de_esfuerzo">Los puntos de estuferzo</a> ganados al derrotar a un Pokémon de esta especie. Se compone de seis números separados por comas, tradicionalmente del 0 al 3. Cada uno corresponde a:<br><code>PS, Ataque, Defensa, Velocidad, Ataque especial, Defensa especial</code></td>
+</tr>
+<tr>
+<td>Rareness</td>
+<td>La rareza; el ratio de captura del Pokémon. Es un número entre 0 y 255. A mayor valor, mayor probabilidad.</td>
+</tr>
+<tr>
+<td>Happiness</td>
+<td>La felicidad base tras capturar al Pokémon. Tradicionalmente 70, aunque puede ser cualquier número entre 0 y 255.</td>
+</tr>
+<tr>
+<td>Moves</td>
+<td>Los movimientos que puede aprender el Pokémon al subir de nivel. Se escriben poniendo el nivel y el nombre interno separado por comas, tal que:<br><code>Nv,Nombre interno</code><br>Asimismo, para añadir otro movimiento, se separa cada pareja de datos por una coma en la misma línea. Por ejemplo:<br><code>1,SCRATCH,1,GROWL,7,EMBER,10,SMOKESCREEN</code></td>
+</tr>
+<tr>
+<td>Compatibility</td>
+<td>El <a href="https://www.wikidex.net/wiki/Grupo_de_huevo">grupo huevo</a> de la especie. Pueden ser una o dos palabras separada por coma. Si se utiliza como grupo huevo "Undiscovered", esa especie no podrá reproducirse. Los grupos huevos son:<br><ul><li>Monster (Monstruo): Pokémon con rasgos de bestia, de dinosaurio o de reptil</li><li>Bug (Bicho): Pokémon con fisonomía insectoide</li><li>Flying (Volador): Pokémon con fisonomía de ave</li><li>Field (Campo): Pokémon semejantes a mamíferos y animales terrestres</li><li>Fairy (Hada): Pokémon tipo hada o pequeños y adorables</li><li>Grass (Planta): Pokémon tipo planta en su mayoría</li><li>Humanlike (Humanoide): Pokémon con fisonomía humanoide</li><li>Mineral (Mineral): Pokémon minerales o artificiales</li><li>Amorphous (Amorfo): Pokémon que carecen de una fisonomía clara</li><li>Water1 (Agua 1): Pokémon de tipo agua insipirados en anfibios, mamíferos y reptiles</li><li>Water2 (Agua 2): Pokémon de tipo agua con aletas</li><li>Water3 (Agua 3): Pokémon tipo agua inspirados en artrópodos y fósiles</li><li>Dragon (Dragón): Pokémon con apariencia de dragón, reptiles o anfibios</li><li>Undiscovered (Desconocido): Legendarios, Pokémon bebés o Pokémon raros como Unown o los fósiles de Galar.</li><li>Ditto: Reservado para Ditto. Se puede reproducir con todos los Pokémon, salvo con los Undiscovered</li></ul></td>
+</tr>
+<tr>
+<td>StepsToHatch</td>
+<td>La cantidad de pasos que necesita un huevo de esta especie para eclosionar. Suele usarse un múltiplo de 255 o 256, habitualmente 5355.</td>
+</tr>
+<tr>
+<td>Height</td>
+<td>Altura del Pokémon en metros, con una cifra decimal separada con un punto. Si el juego reconoce que el jugador es de EEUU, mostrará la altura en pies en su lugar.</td>
+</tr>
+<tr>
+<td>Weight</td>
+<td>El peso del Pokémon en kilogramos, con una cifra decimal separada con un punto. Si el juego reconoce que el jugador es de EEUU, mostrará el peso en libras en su lugar.</td>
+</tr>
+<tr>
+<td>Color</td>
+<td>El color principal de la especie. Debe ser uno de los siguientes:<br><code>Black, Blue, Brown, Gray, Green, Pink, Purple, Red, White, Yellow</code></td>
+</tr>
+<tr>
+<td>Kind</td>
+<td>La especie del Pokémon. Solo es necesario la categoría; la palabra "Pokémon" se agrega desde los scripts. Por ejemplo:<br><code>Kind=Semilla</code></td>
+</tr>
+<tr>
+<td>Pokedex</td>
+<td>La descripción del Pokémon en la Pokédex</td>
+</tr>
+</tbody>
+</table>
+<h3 id="contenido-opcional">Contenido opcional</h3>
+<p>Los siguientes campos pueden estar ausentes a la hora de definir un Pokémon en el PBS. </p>
+<table>
+<thead>
+<tr>
+<th>Dato</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Abilities</td>
+<td>Las habilidades del Pokémon por su nombre interno, separadas por una coma. Se pueden añadir un máximo de 2. Por ejemplo:<br> <code>Abilities=SNOWCLOAK,SLUSHRUSH</code><br><br>Al ser opcional, un Pokémon sin este campo no tendrá ninguna, apareciendo su descripción en blanco. La habilidad posicionada primer lugar se corresponde con la primera de su evolución. De esta forma, si un Pokémon tiene <code>Abilities=HYDRATION,SHELLARMOR</code> y su evolución <code>Abilities=HYDRATION,STICKYHOLD</code>, Hidratación permanecerá igual, pero Caparazón cambiará a Viscosidad</td>
+</tr>
+<tr>
+<td>HiddenAbility</td>
+<td>La habilidad oculta del Pokémon. Al igual que el campo anterior, se utiliza el nombre interno y se separan por comas. Se pueden añadir un máximo de 4.</td>
+</tr>
+<tr>
+<td>EggMoves</td>
+<td>Los movimientos huevo de un Pokémon, es decir, aquellos obtenidos mediante crianza. Se escriben poniendo su nombre interno separado por comas. Por ejemplo:<br><code>ASTONISH,CURSE,EARTHPOWER</code></td>
+</tr>
+<tr>
+<td>Habitat</td>
+<td>El hábitat, el lugar dónde aparece el Pokémon. Puede ser:<br><code>Cave, Forest, Grassland, Mountain, Rare, RoughTerrain, Sea, Urban, WatersEdge</code></td>
+</tr>
+<tr>
+<td>RegionalNumbers</td>
+<td>Usado para definir la posición del Pokémon en la Pokédex regional. Un 0 significa que no pertenece a la Dex de esa región. Son tantos números como Pokédex regionales haya, separados por comas. Por ejemplo:<br><code>25,22,180</code>.</td>
+</tr>
+<tr>
+<td>WildItemCommon<br>WildItemUncommon<br>WildItemRare</td>
+<td>El objeto que lleva un Pokémon salvaje. Se utiliza el nombre interno y cada WildItem corresponde al 50 % (Common), 5 % (Uncommon) y 1 % (Rare). No obstante, si se rellenan los tres con el mismo objeto, la probabilidad pasa a ser 100 %. Por ejemplo, en el caso de Numel, siempre llevará baya Safre, dado que:<br><ul><li>WildItemCommon=RAWSTBERRY</li><li> WildItemUncommon=RAWSTBERRY</li><li>WildItemRare=RAWSTBERRY</ul></td>
+</tr>
+<tr>
+<td>BattlerPlayerY</td>
+<td>La altura a la que se posicionará el back de un Pokémon. Cuanto más alto, más abajo aparecerá. 0 por defecto.</td>
+</tr>
+<tr>
+<td>BattlerEnemyY</td>
+<td>La altura a la que se posicionará el front de un Pokémon. Cuanto más alto, más abajo aparecerá. 0 por defecto.</td>
+</tr>
+<tr>
+<td>BattlerAltitude</td>
+<td>La altura a la que se posicionará el front de un Pokémon respecto a la línea del suelo. Cuanto más alto, más abajo aparecerá. 0 por defecto. Solo puede ser un valor positivo, en cuyo caso se creará una sombra debajo del Pokémon.</td>
+</tr>
+<tr>
+<td>Evolution</td>
+<td>Las formas que tiene un Pokémon de evolucionar. Se compone de tres elementos, siendo: Nombre interno de la especie a la que evoluciona, método de evolución y tercer argumento (nivel, nombre interno de objeto, nombre interno de movimiento...).<br>Por ejemplo, en Chikorita pondremos:<code>Evolutions=BAYLEEF,Level,16</code><br>Si no hay tercer argumento, se pone la coma, pero se deja en blanco. Por ejemplo, en las evoluciones por felicidad:<br><code>Evolutions=TOGETIC,Happiness,</code><br>A continuación se describen los diferentes métodos de evolución que aparecen por defecto en la base, separado con una coma su argumento si lo requiere:<br><ul><li>Level, número: Evoluciona por nivel</li><li>LevelMale, número: Evoluciona por nivel si es macho</li><li>LevelFemale,número: Evoluciona por nivel si es hembra</li><li>LevelDay, número: Evoluciona si sube al nivel indicado por el día</li><li>LevelNight, número: Evoluciona si sube al nivel indicado por la noche</li><li>LevelRain, número: Evoluciona si sube al nivel indicado mientras llueve</li><li>LevelDarkInParty, número: Evoluciona si sube al nivel indicado mientras hay un Pokémon siniestro en el equipo</li><br><li>AttackGreater, número: Evoluciona si el ataque es mayor que la defensa</li><li>AttackDefEqual, número: Evoluciona si el ataque es igual que la defensa</li><li>DefenseGreater, número: Evoluciona si la defensa es mayor que el ataque</li><li>Silcoon, número: Evoluciona si un valor al azar es menor que cinco (sobre diez)</li><li>Cascoon, número: Evoluciona si un valor al azar es mayor o igual que cinco (sobre diez)</li><li>Ninjask, número: Evolución por nivel normal</li><li>Shedinja, número: Si hay una Pokéball en la mochila, se crea un duplicado del Pokémon y cambia a la especie del primer argumento</li><br><li>Item, objeto: Evoluciona por objeto (como por una piedra)</li><li>ItemMale, objeto: Evoluciona por objeto (como por una piedra) si es macho</li><li>ItemFemale, objeto: Evoluciona por objeto (como por una piedra) si es hembra</li><li>DayHoldItem, objeto: Evoluciona si es por el día, tiene el objeto indicado y sube un nivel</li><li>NightHoldItem, objeto: Evoluciona si es por la noche, tiene el objeto indicado y sube un nivel</li><br><li>Happiness,: Evoluciona si alcanza 220 de felicidad y sube un nivel</li><li>HappinessDay,: Evoluciona si alcanza 220 de felicidad y sube un nivel por el día</li><li>HappinessNight,: Evoluciona si alcanza 220 de felicidad y sube un nivel por la noche</li><li>HappinessMoveType, ID del tipo: Evoluciona si alcanza 220 de felicidad y sube un nivel teniendo un movimiento del tipo indicado</li><br><li>HasMove, movimiento: Evoluciona si sube de nivel conociendo el movimiento</li><li>HasInParty, Pokémon: Evoluciona si sube de nivel estando el Pokémon indicado en el equipo</li><br><li>Beauty, número: Evoluciona si sube de nivel teniendo el número de belleza requerida</li><li>Location, ID del mapa: Evoluciona si sube de nivel estando en el mapa indicado</li><li>Trade,: Evoluciona si es intercambiado</li><li>TradeItem, objeto: Evoluciona si es intercambiado con un objeto</li><li>TradeSpecies, Pokémon: Evoluciona si es intercambiado por la especie indicada</li></td>
+</tr>
+<tr>
+<td>FormNames</td>
+<td>El nombre de cada una de las formas de la especie, separada por comas. Se utiliza solo en la página de la Pokédex. Por ejemplo:<br>Sharpedo: <code>FormNames=Mega Sharpedo</code> o <br>Darmanitan:<code>FormNames=Forma Normal,Forma Galar, Forma Daruma, Forma Galar Daruma</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="graficos-y-sonidos">Gráficos y sonidos</h2>
+<h2 id="formas-alternativas">Formas alternativas</h2>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
+      
+    
+  </body>
+</html>
